@@ -4,7 +4,9 @@ import {
     GET_MOVIE_NOWPLAYING, 
     MOVIE_NOWPLAYING_ERROR, 
     GET_MOVIE_UPCOMING, 
-    MOVIE_UPCOMING_ERROR
+    MOVIE_UPCOMING_ERROR,
+    GET_MOVIE_TOPRATED, 
+    MOVIE_TOPRATED_ERROR
 } from "../actions/type"
 
 const initialState = {
@@ -21,6 +23,7 @@ const profileReducer = ( state = initialState, action ) => {
         case GET_MOVIE_POPULAR:
         case GET_MOVIE_NOWPLAYING:
         case GET_MOVIE_UPCOMING:
+        case GET_MOVIE_TOPRATED:
             return {
                 ...state,
                 movies: payload,
@@ -30,6 +33,7 @@ const profileReducer = ( state = initialState, action ) => {
         case MOVIE_POPULAR_ERROR:
         case MOVIE_NOWPLAYING_ERROR:
         case MOVIE_UPCOMING_ERROR:
+        case MOVIE_TOPRATED_ERROR:
             return {
                 ...state,
                 error: payload,
