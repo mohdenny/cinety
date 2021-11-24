@@ -1,5 +1,4 @@
 import React, { Suspense, lazy} from 'react'
-import classNames from 'classnames'
 
 const LazyComponent = lazy(() => import('./Image'))
 
