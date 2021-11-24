@@ -6,7 +6,9 @@ import {
     GET_MOVIE_NOWPLAYING, 
     MOVIE_NOWPLAYING_ERROR, 
     GET_MOVIE_UPCOMING, 
-    MOVIE_UPCOMING_ERROR 
+    MOVIE_UPCOMING_ERROR, 
+    GET_MOVIE_TOPRATED, 
+    MOVIE_TOPRATED_ERROR 
 } from "./type"
 
 export const getPopular = (button = null) => async (dispatch) => {
@@ -52,6 +54,22 @@ export const getUpcoming = (button = null) => async (dispatch) => {
     } catch (err) {
         dispatch({
             type: MOVIE_UPCOMING_ERROR,
+            payload: { msg: err.response.statusText, status: err.response.status }
+        })
+    }
+}
+
+export const getTopRated = (button = null) => async (dispatch) => {
+    try {
+        const res = await api.get(`/movie/top_rated?api_key=${API_KEY}`)
+
+        dispatch({
+            type: GET_MOVIE_TOPRATED,
+            payload: { data: res.data.results, page: res.data.page, clicked: button }
+        })
+    } catch (err) {
+        dispatch({
+            type: MOVIE_TOPRATED_ERROR,
             payload: { msg: err.response.statusText, status: err.response.status }
         })
     }
