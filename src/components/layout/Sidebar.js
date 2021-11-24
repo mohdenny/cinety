@@ -43,7 +43,7 @@ const Navbar = ({ children }) => {
                     </div>
                 }
 
-                <div className="bg-gray-100 p-4 border-t-2 h-full w-full">
+                <div className="bg-gray-100 border-t-2 h-full w-full">
                     {children}
                 </div>
             </div>
