@@ -17,7 +17,7 @@ export const getPopular = (button = null) => async (dispatch) => {
 
         dispatch({
             type: GET_MOVIE_POPULAR,
-            payload: { data: res.data.results, page: res.data.page, clicked: button }
+            payload: { data: res.data.results, page: res.data.page, term: 'popular' }
         })
     } catch (err) {
         dispatch({
@@ -33,7 +33,7 @@ export const getNowPlaying = (button = null) => async (dispatch) => {
 
         dispatch({
             type: GET_MOVIE_NOWPLAYING,
-            payload: { data: res.data.results, page: res.data.page, clicked: button }
+            payload: { data: res.data.results, page: res.data.page, term: 'now_playing' }
         })
     } catch (err) {
         dispatch({
@@ -49,7 +49,7 @@ export const getUpcoming = (button = null) => async (dispatch) => {
 
         dispatch({
             type: GET_MOVIE_UPCOMING,
-            payload: { data: res.data.results, page: res.data.page, clicked: button }
+            payload: { data: res.data.results, page: res.data.page, term: 'upcoming' }
         })
     } catch (err) {
         dispatch({
@@ -65,7 +65,7 @@ export const getTopRated = (button = null) => async (dispatch) => {
 
         dispatch({
             type: GET_MOVIE_TOPRATED,
-            payload: { data: res.data.results, page: res.data.page, clicked: button }
+            payload: { data: res.data.results, page: res.data.page, term: 'top_rated' }
         })
     } catch (err) {
         dispatch({
