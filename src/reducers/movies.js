@@ -12,7 +12,6 @@ import {
 const initialState = {
     movies: [],
     loading: true,
-    clicked: null,
     error: {}
 }
 
@@ -27,7 +26,6 @@ const profileReducer = ( state = initialState, action ) => {
             return {
                 ...state,
                 movies: payload,
-                clicked: payload.clicked,
                 loading: false
             }
         case MOVIE_POPULAR_ERROR:
@@ -38,7 +36,6 @@ const profileReducer = ( state = initialState, action ) => {
                 ...state,
                 error: payload,
                 loading: false,
-                clicked: null,
                 movies: null
             }
         default:

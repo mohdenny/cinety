@@ -14,10 +14,10 @@ const Dashboard = ({
     movies: { movies }
 }) => {
     const movie = movies.data
-    const clicked = movies.clicked
+    const term = movies.term
 
     useEffect(() => {
-        getPopular('popular')
+        getPopular()
     }, [getPopular])
 
     return (
@@ -26,21 +26,15 @@ const Dashboard = ({
                 {/* <Heading text="Dashboard" /> */}
 
                 <div className="flex flex-row space-x-4 bg-white border-b-2 py-2 items-center justify-center">
-                    <Chip text="Popular" action={getPopular} name="popular" clicked={clicked}/>
-                    <Chip text="Now Playing" action={getNowPlaying} name="now-playing" clicked={clicked}/>
-                    <Chip text="Upcoming" action={getUpcoming} name="upcoming" clicked={clicked}/>
-                    <Chip text="Top Rated" action={getTopRated} name="top-rated" clicked={clicked}/>
+                    <Chip text="Popular" actions={getPopular} name="popular" term={term}/>
+                    <Chip text="Now Playing" actions={getNowPlaying} name="now_playing" term={term}/>
+                    <Chip text="Upcoming" actions={getUpcoming} name="upcoming" term={term}/>
+                    <Chip text="Top Rated" actions={getTopRated} name="top_rated" term={term}/>
                 </div>
 
                 <div className="px-4 grid grid-cols-4 gap-4">
                     {
-                        movie && movie.map(item => {
-                            return (
-                                <Fragment key={item.id}>
-                                    <Card imageUrl={item.backdrop_path} title={item.title} overview={item.overview} rating={item.vote_average}/>
-                                </Fragment>
-                            )
-                        })
+                        movie && <Card movie={movie}/>
                     }
                 </div>
             </div>
