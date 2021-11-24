@@ -1,8 +1,16 @@
-import { GET_MOVIE_POPULAR, MOVIE_POPULAR_ERROR } from "../actions/type"
+import { 
+    GET_MOVIE_POPULAR, 
+    MOVIE_POPULAR_ERROR,
+    GET_MOVIE_NOWPLAYING, 
+    MOVIE_NOWPLAYING_ERROR, 
+    GET_MOVIE_UPCOMING, 
+    MOVIE_UPCOMING_ERROR
+} from "../actions/type"
 
 const initialState = {
     movies: [],
     loading: true,
+    clicked: null,
     error: {}
 }
 
@@ -11,16 +19,22 @@ const profileReducer = ( state = initialState, action ) => {
 
     switch (type) {
         case GET_MOVIE_POPULAR:
+        case GET_MOVIE_NOWPLAYING:
+        case GET_MOVIE_UPCOMING:
             return {
                 ...state,
                 movies: payload,
+                clicked: payload.clicked,
                 loading: false
             }
         case MOVIE_POPULAR_ERROR:
+        case MOVIE_NOWPLAYING_ERROR:
+        case MOVIE_UPCOMING_ERROR:
             return {
                 ...state,
                 error: payload,
                 loading: false,
+                clicked: null,
                 movies: null
             }
         default:
