@@ -22,13 +22,14 @@ const Navbar = ({ children }) => {
                 </div>
 
                 <div className="flex flex-row space-x-4 h-full">
+                    <p className="h-full w-auto flex items-center justify-center">Mohdenny</p>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-full w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </div>
             </nav>
 
-            <div className="flex flex-row space-x-4">
+            <div className="flex flex-row space-x-4 font-roboto">
                 {
                     !toggleMenu &&
                     <div className="h-full w-64 py-4">
@@ -63,8 +64,8 @@ const Navbar = ({ children }) => {
                             <button className="h-full w-auto">Favorites</button>
                         </div>
                         <div className="hover:bg-gray-200 h-10 w-full flex px-8 space-x-4 content-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-full w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
                             <button className="h-full w-auto">Profile</button>
                         </div>
