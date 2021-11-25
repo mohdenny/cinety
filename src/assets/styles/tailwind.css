@@ -601,6 +601,8 @@ video {
 
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Righteous&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 .container {
   width: 100%;
 }
@@ -22379,6 +22381,10 @@ video {
 
 .font-righteous {
   font-family: Righteous;
+}
+
+.font-roboto {
+  font-family: Roboto;
 }
 
 .text-xs {
@@ -53956,6 +53962,10 @@ video {
     font-family: Righteous;
   }
 
+  .sm\:font-roboto {
+    font-family: Roboto;
+  }
+
   .sm\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -85177,6 +85187,10 @@ video {
 
   .md\:font-righteous {
     font-family: Righteous;
+  }
+
+  .md\:font-roboto {
+    font-family: Roboto;
   }
 
   .md\:text-xs {
@@ -116402,6 +116416,10 @@ video {
     font-family: Righteous;
   }
 
+  .lg\:font-roboto {
+    font-family: Roboto;
+  }
+
   .lg\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -147625,6 +147643,10 @@ video {
     font-family: Righteous;
   }
 
+  .xl\:font-roboto {
+    font-family: Roboto;
+  }
+
   .xl\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -178846,6 +178868,10 @@ video {
 
   .\32xl\:font-righteous {
     font-family: Righteous;
+  }
+
+  .\32xl\:font-roboto {
+    font-family: Roboto;
   }
 
   .\32xl\:text-xs {
