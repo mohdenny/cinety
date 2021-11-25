@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'righteous': ['Righteous']
+        'righteous': ['Righteous'],
+        'roboto' : ['Roboto']
       }
     },
   },
